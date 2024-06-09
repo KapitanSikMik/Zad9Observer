@@ -1,0 +1,14 @@
+C:\Users\Student\source\repos\Observer9\Observer9\bin\Debug\net8.0\Observer9.exe
+C:\Users\Student\source\repos\Observer9\Observer9\bin\Debug\net8.0\Observer9.deps.json
+C:\Users\Student\source\repos\Observer9\Observer9\bin\Debug\net8.0\Observer9.runtimeconfig.json
+C:\Users\Student\source\repos\Observer9\Observer9\bin\Debug\net8.0\Observer9.dll
+C:\Users\Student\source\repos\Observer9\Observer9\bin\Debug\net8.0\Observer9.pdb
+C:\Users\Student\source\repos\Observer9\Observer9\obj\Debug\net8.0\Observer9.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\source\repos\Observer9\Observer9\obj\Debug\net8.0\Observer9.AssemblyInfoInputs.cache
+C:\Users\Student\source\repos\Observer9\Observer9\obj\Debug\net8.0\Observer9.AssemblyInfo.cs
+C:\Users\Student\source\repos\Observer9\Observer9\obj\Debug\net8.0\Observer9.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\Observer9\Observer9\obj\Debug\net8.0\Observer9.dll
+C:\Users\Student\source\repos\Observer9\Observer9\obj\Debug\net8.0\refint\Observer9.dll
+C:\Users\Student\source\repos\Observer9\Observer9\obj\Debug\net8.0\Observer9.pdb
+C:\Users\Student\source\repos\Observer9\Observer9\obj\Debug\net8.0\Observer9.genruntimeconfig.cache
+C:\Users\Student\source\repos\Observer9\Observer9\obj\Debug\net8.0\ref\Observer9.dll

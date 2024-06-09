@@ -1,0 +1,77 @@
+﻿Interface IObserver:
+    Method Update(temperature, humidity, pressure)
+
+Interface IDisplayElement:
+    Method Display()
+
+    Class WeatherStation:
+    List of IObserver observers
+    Float temperature
+    Float humidity
+    Float pressure
+
+    Method RegisterObserver(observer):
+        Add observer to observers list
+
+    Method RemoveObserver(observer):
+        Remove observer from observers list
+
+    Method NotifyObservers():
+        For each observer in observers:
+            observer.Update(temperature, humidity, pressure)
+
+    Method SetMeasurements(temp, hum, pres):
+        temperature = temp
+        humidity = hum
+        pressure = pres
+        NotifyObservers()
+
+        Class CurrentConditionsDisplay implements IObserver, IDisplayElement:
+    Float temperature
+    Float humidity
+    WeatherStation weatherStation
+
+    Constructor(weatherStation):
+        this.weatherStation = weatherStation
+        weatherStation.RegisterObserver(this)
+
+    Method Update(temp, hum, pres):
+        temperature = temp
+        humidity = hum
+        Display()
+
+    Method Display():
+        Print "Aktualne warunki: temperatura stopni celcujsza i % wilgotności"
+
+        Class ForecastDisplay implements IObserver, IDisplayElement:
+    Float currentPressure = 29.92
+    Float lastPressure
+    WeatherStation weatherStation
+
+    Constructor(weatherStation):
+        this.weatherStation = weatherStation
+        weatherStation.RegisterObserver(this)
+
+    Method Update(temp, hum, pres):
+        lastPressure = currentPressure
+        currentPressure = pres
+        Display()
+
+    Method Display():
+        Print "Prognoza: "
+        If currentPressure > lastPressure:
+            Print "Spodziewane poprawienie pogody"
+        Else If currentPressure == lastPressure:
+            Print "Brak perspektywn na poprawę warunków pogodowych "
+        Else If currentPressure < lastPressure:
+            Print "Spodziewane ochłodzenie i deszczowa pogoda"
+
+    WeatherStation weatherStation = new WeatherStation()
+
+    CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(weatherStation)
+    ForecastDisplay forecastDisplay = new ForecastDisplay(weatherStation)
+
+    weatherStation.SetMeasurements(33, 65, 30.4f)
+    weatherStation.SetMeasurements(28, 70, 29.2f)
+    weatherStation.SetMeasurements(29, 90, 29.2f)
+
